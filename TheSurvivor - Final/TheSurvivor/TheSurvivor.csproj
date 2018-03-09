@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57BC3283-3907-40DC-BF09-63BA64B73151}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheSurvivor</RootNamespace>
+    <AssemblyName>TheSurvivor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credits.Designer.cs">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOverScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOverScreen.Designer.cs">
+      <DependentUpon>GameOverScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HighScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScore.Designer.cs">
+      <DependentUpon>HighScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level1.Designer.cs">
+      <DependentUpon>Level1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level2.Designer.cs">
+      <DependentUpon>Level2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level3.Designer.cs">
+      <DependentUpon>Level3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level4.Designer.cs">
+      <DependentUpon>Level4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Music.cs" />
+    <Compile Include="NonPlayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PauseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PauseScreen.Designer.cs">
+      <DependentUpon>PauseScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Credits.resx">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOverScreen.resx">
+      <DependentUpon>GameOverScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScore.resx">
+      <DependentUpon>HighScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level1.resx">
+      <DependentUpon>Level1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level2.resx">
+      <DependentUpon>Level2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level4.resx">
+      <DependentUpon>Level4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PauseScreen.resx">
+      <DependentUpon>PauseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fallingNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movPlat11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miniFalling2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mycoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mycoin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movPlat21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movPlat31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IdleNonGif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiamondBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiamondRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FloorBlueSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FloorDouble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnemyShortAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IdleRightSmall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IdleLeftSmall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JumpLeftSmall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JumpRightSmall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RunLeftSmall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RunRightSmall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeadSmall.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\npo[0].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartBlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FirePrincess.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\longEnemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\longEnemyBlood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\npo[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\npo[2].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\npo[2]Blood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIRE2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl4_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gem.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy-knight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenSpike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plat3.3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroung_final.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainMenuGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DragonGust.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FreeVector-Silver-Star-Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighBackGround.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophyPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Climbing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClimbingIdle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OptionButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnNewHighScore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnNoHighScore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewHighScore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoHighScore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OptionsForm211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sonudOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soundsOnN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WASDN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainMenu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseScreenForm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\returnToGame1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonHighSc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophyNew11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophyNew31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DevTeam1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DevTeam11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainMenuButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\Title.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
